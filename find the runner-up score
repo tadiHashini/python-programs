@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    scores = list(set(arr))   # remove duplicates
+    scores.sort()
+    
+    print(scores[-2])
+
