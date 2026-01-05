@@ -1,0 +1,16 @@
+import re
+
+# Read rows and columns
+n, m = map(int, input().split())
+
+# Read the matrix
+matrix = [input() for _ in range(n)]
+
+# Decode the script by reading columns first
+decoded = ''.join(''.join(row[col] for row in matrix) for col in range(m))
+
+# Replace non-alphanumeric characters between alphanumerics with a single space
+decoded_script = re.sub(r'(?<=\w)([^\w]+)(?=\w)', ' ', decoded)
+
+print(decoded_script)
+
