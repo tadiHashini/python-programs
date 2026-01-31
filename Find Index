@@ -1,0 +1,9 @@
+def findIndex(arr, x):
+    return arr.index(x)
+
+
+# Example usage
+arr = tuple(map(int, input().split()))
+x = int(input())
+
+print(findIndex(arr, x))
