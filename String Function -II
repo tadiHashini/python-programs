@@ -1,0 +1,6 @@
+def gfg(S):
+    s = S.lower()
+    if s.startswith("gfg") and s.endswith("gfg"):
+        print("Yes")
+    else:
+        print("No")
