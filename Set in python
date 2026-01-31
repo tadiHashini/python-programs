@@ -1,0 +1,24 @@
+import pandas as pd
+
+# Example input dataframe
+data = {
+    'product_id': [1, 2, 3, 4],
+    'product_name': ['Laptop', 'Mouse', 'Monitor', 'Keyboard'],
+    'rating': [4.6, 4.2, 4.8, 4.7],
+    'quantity_in_stock': [10, 0, 5, 8],
+    'price': [1200, 50, 350, 250]
+}
+
+df = pd.DataFrame(data)
+
+# Filter products based on the given criteria
+high_rated_expensive = df[
+    (df['rating'] >= 4.5) &
+    (df['quantity_in_stock'] > 0) &
+    (df['price'] >= 300)
+]
+
+# Select required columns
+result = high_rated_expensive[['product_id', 'product_name', 'rating', 'quantity_in_stock', 'price']]
+
+print(result)
