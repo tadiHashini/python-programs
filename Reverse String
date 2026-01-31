@@ -1,0 +1,2 @@
+def reverseString(s: str) -> str:
+    return s[::-1]
